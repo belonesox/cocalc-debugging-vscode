@@ -1,0 +1,164 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // "type": "pwa-node",
+            // "program": "./cocalc/src/packages/hub/run/hub.js",
+            "type": "node-terminal",
+            "console": "integratedTerminal",
+            "command": "node ./cocalc/src/packages/hub/run/hub.js --mode=single-user --next-server --proxy-server --websocket-server --hostname=0.0.0.0 ",
+            "request": "launch",
+            "name": "run hub single",
+            "outFiles": [
+                "${workspaceFolder}/**/dist/**/",
+                "!**/node_modules/**"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "PGUSER": "smc",
+                "PGHOST": "127.0.0.1",
+                "PROJECTS": "/data4tb/smc/[project_id]",    
+                "DEBUG NODE_ENV" : "development",
+                "NODE_OPTIONS" : "--inspect",
+                "COCALC_NO_IDLE_TIMEOUT": "yes",
+            },
+            "runtimeArgs": [
+                "--max_old_space_size=8000",
+                "--trace-warnings",
+                // "--preserve-symlinks",
+                "--enable-source-maps"
+            ],
+            "outputCapture": "std",
+            "justMyCode": false
+    },
+    {
+        "type": "node-terminal",
+        "console": "integratedTerminal",
+        "command": "node ./cocalc/src/packages/project/node_modules/.bin/cocalc-project",
+        "request": "launch",
+        "name": "project-daemon",
+        "outFiles": [
+            "${workspaceFolder}/**/dist/**/",
+            "!**/node_modules/**"
+        ],
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "env": {
+            "PGUSER": "smc",
+            "PGHOST": "127.0.0.1",
+            "HOME": "/data4tb/smc/aad7cdbf-899e-45f2-98da-4b502c4b8901",    
+            "DATA": "/data4tb/smc/aad7cdbf-899e-45f2-98da-4b502c4b8901/.smc",    
+            "PROJECTS": "/data4tb/smc/[project_id]",    
+            "DEBUG NODE_ENV" : "development",
+            "NODE_OPTIONS" : "--inspect",
+            "COCALC_NO_IDLE_TIMEOUT": "yes",
+        },
+        "runtimeArgs": [
+            "--max_old_space_size=8000",
+            "--trace-warnings",
+            // "--preserve-symlinks",
+            "--enable-source-maps"
+        ],
+        "outputCapture": "std",
+        "justMyCode": false
+},
+    {
+        // "type": "pwa-node",
+        // "program": "./cocalc/src/packages/hub/run/hub.js",
+        "type": "node-terminal",
+        "console": "integratedTerminal",
+        "command": "node ./cocalc/src/packages/hub/run/hub.js --mode=single-user --all --hostname=0.0.0.0 ",
+        "request": "launch",
+        "name": "hub single all",
+        "outFiles": [
+            "${workspaceFolder}/**/dist/**/",
+            "!**/node_modules/**"
+        ],
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "env": {
+            "PGUSER": "smc",
+            "PGHOST": "127.0.0.1",
+            "PROJECTS": "/data4tb/smc/[project_id]",    
+            "DEBUG NODE_ENV" : "development",
+            "NODE_OPTIONS" : "--inspect",
+            "COCALC_NO_IDLE_TIMEOUT": "yes",
+        },
+        "runtimeArgs": [
+            "--max_old_space_size=8000",
+            "--trace-warnings",
+            // "--preserve-symlinks",
+            "--enable-source-maps"
+        ],
+        "outputCapture": "std",
+        "justMyCode": false
+},
+{
+        // "type": "pwa-node",
+        // "program": "./cocalc/src/packages/hub/run/hub.js",
+        "type": "node-terminal",
+        "console": "integratedTerminal",
+        "sudo": true,        
+        "command": "node ./cocalc/src/packages/hub/run/hub.js --mode=multi-user --next-server --proxy-server --websocket-server --hostname=0.0.0.0",
+        "request": "launch",
+        "name": "runmulti",
+        "outFiles": [
+            "${workspaceFolder}/**/dist/**/",
+            "!**/node_modules/**"
+        ],
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "env": {
+            "PGUSER": "smc",
+            "PGHOST": "127.0.0.1",
+            "PROJECTS": "/data4tb/smc/[project_id]",    
+            "DEBUG NODE_ENV" : "development",
+            "COCALC_NO_IDLE_TIMEOUT": "yes",
+        },
+        "runtimeArgs": [
+            "--max_old_space_size=8000",
+            "--trace-warnings",
+            // "--preserve-symlinks",
+            "--enable-source-maps"
+        ],
+        "justMyCode": true
+},
+{
+    "type": "node-terminal",
+    "console": "integratedTerminal",
+    "command": "node ./cocalc/src/packages/hub/run/hub.js --mode=single-user --next-server --proxy-server --websocket-server --hostname=0.0.0.0 --mode=single-user",
+    "request": "launch",
+    "name": "runjs",
+    "outFiles": [
+        "${workspaceFolder}/**/dist/**/",
+        "!**/node_modules/**"
+    ],
+    "skipFiles": [
+        "<node_internals>/**"
+    ],
+    "env": {
+        "PGUSER": "smc",
+        "PGHOST": "127.0.0.1",
+        "PROJECTS": "/data4tb/smc/[project_id]",    
+        "DEBUG NODE_ENV" : "development",
+        "COCALC_NO_IDLE_TIMEOUT": "yes",
+    },
+    "runtimeArgs": [
+        "--max_old_space_size=8000",
+        "--trace-warnings",
+        "--enable-source-maps"
+    ],
+    "outputCapture": "std",
+    "justMyCode": false
+},
+
+]
+}
