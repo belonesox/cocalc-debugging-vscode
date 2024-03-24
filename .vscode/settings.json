@@ -21,5 +21,31 @@
     }
   ],
   "search.useGlobalIgnoreFiles": true,
-  "search.useParentIgnoreFiles": true
+"search.useParentIgnoreFiles": true,
+"workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#dc8d39",
+    "activityBar.activeBorder": "#aef1d0",
+    "activityBar.background": "#dc8d39",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#aef1d0",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#dc8d39",
+    "statusBar.background": "#c07322",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#95591a",
+    "statusBarItem.remoteBackground": "#c07322",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#c07322",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#c0732299",
+    "titleBar.inactiveForeground": "#15202b99",
+    "commandCenter.border": "#15202b99"
+},
+"peacock.color": "#c07322",
+"files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  }
 }
